@@ -1,4 +1,8 @@
-package com.designmode.factory;
+package com.designmode.factory.simple;
+
+import com.designmode.factory.CheesePizza;
+import com.designmode.factory.Pizza;
+import com.designmode.factory.VeggiePizza;
 
 /**
  * @author lqc
