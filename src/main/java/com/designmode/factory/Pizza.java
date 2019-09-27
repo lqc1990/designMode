@@ -33,4 +33,8 @@ public abstract class Pizza {
     public void box(){
         System.out.println("打包装盒");
     }
+
+    public String getName() {
+        return name;
+    }
 }

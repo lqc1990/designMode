@@ -5,12 +5,13 @@ package com.designmode.factory;
  */
 public abstract class PizzaStore {
 
-    public final void orderPizza(String type){
+    public final Pizza orderPizza(String type){
         Pizza pizza = createPizza(type);
         pizza.prepare();
         pizza.cut();
         pizza.bake();
         pizza.box();
+        return pizza;
     }
 
     public abstract Pizza createPizza(String type);
