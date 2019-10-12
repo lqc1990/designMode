@@ -8,7 +8,7 @@ public class Test {
     public static void main(String[] args) {
 
         Light light = new LivingRoomLight();
-        LightCommand command = new LightCommand();
+        LightoNoCommand command = new LightoNoCommand();
         command.setLight(light);
         SimpleRemoteControl control = new SimpleRemoteControl();
         control.setCommand(command);

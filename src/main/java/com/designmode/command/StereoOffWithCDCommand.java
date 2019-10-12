@@ -3,7 +3,7 @@ package com.designmode.command;
 /**
  * @author lqc
  */
-public class StereoOnWithCDCommand implements Command {
+public class StereoOffWithCDCommand implements Command {
 
     private Stereo stereo;
 
@@ -13,12 +13,11 @@ public class StereoOnWithCDCommand implements Command {
 
     @Override
     public void execute() {
-        stereo.on();
-        stereo.setCD("JAY");
+        stereo.off();
     }
 
     @Override
     public void undo() {
-        stereo.off();
+        stereo.on();
     }
 }

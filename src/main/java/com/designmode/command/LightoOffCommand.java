@@ -3,7 +3,7 @@ package com.designmode.command;
 /**
  * @author lqc
  */
-public class LightCommand implements Command{
+public class LightoOffCommand implements Command{
 
     private Light light;
 
@@ -13,6 +13,11 @@ public class LightCommand implements Command{
 
     @Override
     public void execute() {
+        light.off();
+    }
+
+    @Override
+    public void undo() {
         light.on();
     }
 }
