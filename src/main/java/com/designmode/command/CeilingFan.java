@@ -19,21 +19,33 @@ public class CeilingFan {
 
     public void high(){
         speed = HIGH;
+        System.out.println(location+"的当前风速是"+speed);
     }
 
     public void medium(){
         speed = MEDIUM;
+        System.out.println(location+"的当前风速是"+speed);
     }
 
     public void low(){
         speed = LOW;
+        System.out.println(location+"的当前风速是"+speed);
     }
 
     public void off(){
         speed = OFF;
+        System.out.println(location+"的当前风速是"+speed);
     }
 
     public int getSpeed(){
         return speed;
+    }
+
+    @Override
+    public String toString() {
+        return "CeilingFan{" +
+                "location='" + location + '\'' +
+                ", speed=" + speed +
+                '}';
     }
 }
