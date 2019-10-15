@@ -44,7 +44,7 @@ public class RemoteControlTest {
         remoteControl.undoButtonWasPushed();
         remoteControl.onButtonWasPushed(1);
         remoteControl.offButtonWasPushed(1);
-        //风扇
+
         //打开风扇
         remoteControl.onButtonWasPushed(3);
         //关闭风扇
