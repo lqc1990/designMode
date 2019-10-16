@@ -8,8 +8,10 @@ public abstract class CaffeineBeverage {
     final void prepareRecipe(){
         boilWater();
         brew();
-        addCondiments();
         pourInCup();
+        if(customerWantsCondiments()){
+            addCondiments();
+        }
     }
 
     void boilWater(){
@@ -18,6 +20,10 @@ public abstract class CaffeineBeverage {
 
     void pourInCup(){
         System.out.println("Pouring into cup");
+    }
+
+    boolean customerWantsCondiments(){
+        return true;
     }
 
     abstract void brew();
