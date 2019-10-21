@@ -1,6 +1,7 @@
 package com.designmode.combination;
 
 import java.math.BigDecimal;
+import java.util.Iterator;
 
 /**
  * @author lqc
@@ -38,4 +39,6 @@ public abstract class MenuComponent {
     public void print(){
         throw new UnsupportedOperationException();
     }
+
+    public abstract Iterator<MenuComponent> createIterator();
 }

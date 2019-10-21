@@ -26,7 +26,8 @@ public class MenuDriverTest {
 
         Waiterss waitress = new Waiterss(menuComponent);
         waitress.menuPrint();
-
+        System.out.println("-----------------ITER-------------------");
+        waitress.iterPrint();
     }
 
 

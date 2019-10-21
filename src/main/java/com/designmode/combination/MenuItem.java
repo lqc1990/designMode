@@ -1,6 +1,7 @@
 package com.designmode.combination;
 
 import java.math.BigDecimal;
+import java.util.Iterator;
 
 /**
  * @author lqc
@@ -46,5 +47,10 @@ public class MenuItem extends MenuComponent {
         }
         System.out.print(","+getPrice());
         System.out.println("  --"+getDescribe());
+    }
+
+    @Override
+    public Iterator<MenuComponent> createIterator() {
+        return new NullIterator();
     }
 }
