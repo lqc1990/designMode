@@ -28,7 +28,8 @@ public class SoldState implements IState{
 
     @Override
     public void dispense() {
-        if(gumballMachine.count > 0){
+        gumballMachine.releaseBall();
+        if(gumballMachine.getCount() > 0){
             gumballMachine.setState(gumballMachine.getNotHasQuarterState());
         } else {
             System.out.println("Oops, out of gumballs");

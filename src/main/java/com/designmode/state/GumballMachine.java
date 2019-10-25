@@ -8,6 +8,7 @@ public class GumballMachine {
     private IState notHasQuarterState;
     private IState soldOutState;
     private IState soldState;
+    private IState winnerState;
 
     IState state;
     int count = 0;
@@ -18,6 +19,7 @@ public class GumballMachine {
         notHasQuarterState = new NotHasQuarterState(this);
         soldState = new SoldState(this);
         soldOutState = new SoldOutState(this);
+        winnerState = new WinnerState(this);
         if(count > 0){
             state = notHasQuarterState;
         }
@@ -60,10 +62,18 @@ public class GumballMachine {
         return soldState;
     }
 
+    public IState getWinnerState() {
+        return winnerState;
+    }
+
     public void releaseBall(){
         System.out.println("一个糖果弹出");
         if(count != 0){
             count = count -1;
         }
+    }
+
+    public int getCount() {
+        return count;
     }
 }

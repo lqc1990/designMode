@@ -14,6 +14,7 @@ public class NotHasQuarterState implements IState{
     @Override
     public void insertQuarter() {
         System.out.println("投币成功");
+        gumballMachine.setState(gumballMachine.getHasQuarterState());
     }
 
     @Override
